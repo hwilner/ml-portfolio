@@ -1,0 +1,36 @@
+# Core numerical stack -- needed by everything in notebooks/ and src/
+numpy>=1.24
+pandas>=2.0
+scipy>=1.10
+matplotlib>=3.7
+
+# Statistics / modelling
+statsmodels>=0.14
+scikit-learn>=1.3
+
+# Computer vision (notebooks/04-computer-vision/)
+scikit-image>=0.21
+Pillow>=10.0
+
+# NLP (notebooks/01-nlp/)
+wordcloud>=1.9
+# NYSIIS phonetic encoding. The original `fuzzy` package needs a C compiler and
+# fails to install on many machines; `nysiis_compat.py` prefers it and falls back
+# to `abydos`, which is pure Python. Either one satisfies the notebook.
+abydos>=0.4
+fuzzy>=0.18 ; platform_system == "Linux" and platform_machine == "x86_64"
+
+# Deep learning (notebooks/04-computer-vision/03-asl-recognition-cnn.ipynb)
+tensorflow>=2.15
+
+# Automated ML (notebooks/03-machine-learning/03-tpot-blood-donations-automl.ipynb)
+# NOTE: TPOT 1.x removed generations / population_size / verbosity / config_dict.
+# The notebook targets the 1.x API.
+tpot>=1.0
+
+# SQL notebook driver
+sqlalchemy>=2.0
+psycopg2-binary>=2.9
+
+# Testing
+pytest>=7.4

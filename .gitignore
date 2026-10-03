@@ -1,0 +1,86 @@
+# Jupyter
+.ipynb_checkpoints/
+.ipynb_checkpoints
+profile_default/
+ipython_config.py
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.mypy_cache/
+.ruff_cache/
+
+# Editors
+.idea/
+.vscode/
+*.swp
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Datasets fetched by scripts/fetch_data.py (kept out of git by design)
+data/**/papers.csv
+data/**/papers.csv.gz
+data/**/echonest-metrics.json
+data/**/fma-rock-vs-hiphop.csv
+data/**/babynames_ssa.csv
+data/**/images.zip
+data/**/A.zip
+data/**/B.zip
+data/**/C.zip
+
+# Local databases created by the SQL project
+*.sqlite
+*.db
+international_debt
+
+# Synthetic stand-ins generated on demand by the CV notebooks.
+# Real data belongs here via scripts/fetch_data.py; the generated shapes are
+# only there so a fresh clone can still run end to end.
+data/computer-vision/asl-letters/[A-Z]/
+data/computer-vision/naive-bees/*.jpg
+!data/computer-vision/naive-bees/labels.csv
+**/saved_images/
+
+# Third-party image and paper corpora recovered from Kaggle. Fetch them with
+# the commands in the respective data/*/README.md rather than committing
+# 50 MB of someone else's photographs or a 325 MB paper dump.
+data/computer-vision/bees/bee_imgs/
+data/nlp/nips/
+
+# Kaggle kernel staging directories (scripts/kaggle_run.py output)
+.kaggle-kernels/
